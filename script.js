@@ -15,9 +15,8 @@ var p1score = 0;
 var p2score = 0;
 dice.addEventListener("click", roll);
 
-let inputScore = 0;
-
-inputScore = prompt("Enter the Winning Score! (default 25) :");
+var inputScore = 0;
+export default inputScore = prompt("Enter the Winning Score! (default 25) :");
 
 $(document).ready(function () {
   if (inputScore == null || inputScore == "") {
@@ -27,14 +26,6 @@ $(document).ready(function () {
     max.innerHTML = inputScore;
   }
 });
-
-function winner(p1s, p2s, ins) {
-  if (p1s >= ins) {
-    alert("Player 1 Wins!");
-  } else if (p2s >= ins) {
-    alert("Player 2 Wins!");
-  }
-}
 
 $("#reset").click(function () {
   document.location.reload(true);

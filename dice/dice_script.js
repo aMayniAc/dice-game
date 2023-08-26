@@ -1,4 +1,8 @@
+import inputScore from "../script.js";
+
 let player = document.getElementById("player");
+var p1score = 0;
+var p2score = 0;
 
 export default function roll() {
   let a = Math.floor(Math.random() * 6 + 1);
@@ -28,10 +32,18 @@ export default function roll() {
   dice.dataset.side = a;
   dice.classList.toggle("reRoll");
 
-  outputDiv.classList.remove("reveal");
-  outputDiv.classList.add("hide");
-  outputDiv.innerHTML = "You've got " + result;
-  setTimeout(function () {
-    outputDiv.classList.add("reveal");
-  }, 1500);
+  // outputDiv.classList.remove("reveal");
+  // outputDiv.classList.add("hide");
+  // outputDiv.innerHTML = "You've got " + result;
+  // setTimeout(function () {
+  //   outputDiv.classList.add("reveal");
+  // }, 1500);
+}
+
+function winner(p1s, p2s, ins) {
+  if (p1s >= ins) {
+    alert("Player 1 Wins!");
+  } else if (p2s >= ins) {
+    alert("Player 2 Wins!");
+  }
 }
