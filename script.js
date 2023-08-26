@@ -15,8 +15,12 @@ var p1score = 0;
 var p2score = 0;
 dice.addEventListener("click", roll);
 
-var inputScore = 0;
-export default inputScore = prompt("Enter the Winning Score! (default 25) :");
+let { value: inputScore } = await Swal.fire({
+  title: "Enter the Winning Score!",
+  input: "text",
+  inputLabel: "Default 25",
+  confirmButtonText: "Play!",
+});
 
 $(document).ready(function () {
   if (inputScore == null || inputScore == "") {
@@ -30,3 +34,5 @@ $(document).ready(function () {
 $("#reset").click(function () {
   document.location.reload(true);
 });
+
+export default inputScore;

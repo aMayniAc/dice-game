@@ -6,11 +6,18 @@
     <title>Dice Game</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="dice/dice_css.css" />
+
     <script
       type="text/javascript"
       src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"
     ></script>
-    <!-- <script src="https://unpkg.com/bootstrap-modbox"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      rel="stylesheet"
+      href="@sweetalert2/theme-material-ui/material-ui.css"
+    />
+
+    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
   </head>
   <body>
     <header>
@@ -57,7 +64,6 @@
         </div>
       </div>
 
-      <!-- <div id="diceResult">Click to roll the dice!</div> -->
       <div class="flex-container">
         <div class="player1">
           <h4 class="rolltext">You rolled a</h4>
