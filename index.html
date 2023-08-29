@@ -6,6 +6,24 @@
     <title>Dice Game</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="dice/dice_css.css" />
+    <link rel="stylesheet" href="bg-animation/bg.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rubik%20Iso"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Indie%20Flower"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Amatic%20SC"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+    />
 
     <script
       type="text/javascript"
@@ -20,82 +38,111 @@
     <script src="sweetalert2/dist/sweetalert2.min.js"></script>
   </head>
   <body>
-    <header>
-      <div class="nav">
-        <h1 class="title">A Game of Dice!</h1>
-      </div>
-    </header>
-    <div class="container">
-      <div class="dice-container">
-        <div id="dice" data-side="1">
-          <div class="sides side-1">
-            <span class="dot dot-1"></span>
-          </div>
-          <div class="sides side-2">
-            <span class="dot dot-1"></span>
-            <span class="dot dot-2"></span>
-          </div>
-          <div class="sides side-3">
-            <span class="dot dot-1"></span>
-            <span class="dot dot-2"></span>
-            <span class="dot dot-3"></span>
-          </div>
-          <div class="sides side-4">
-            <span class="dot dot-1"></span>
-            <span class="dot dot-2"></span>
-            <span class="dot dot-3"></span>
-            <span class="dot dot-4"></span>
-          </div>
-          <div class="sides side-5">
-            <span class="dot dot-1"></span>
-            <span class="dot dot-2"></span>
-            <span class="dot dot-3"></span>
-            <span class="dot dot-4"></span>
-            <span class="dot dot-5"></span>
-          </div>
-          <div class="sides side-6">
-            <span class="dot dot-1"></span>
-            <span class="dot dot-2"></span>
-            <span class="dot dot-3"></span>
-            <span class="dot dot-4"></span>
-            <span class="dot dot-5"></span>
-            <span class="dot dot-6"></span>
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <header>
+        <div class="nav">
+          <h1 class="title">A Game of Dice!</h1>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="dice-container">
+          <div id="dice" data-side="1">
+            <div class="sides side-1">
+              <span class="dot dot-1"></span>
+            </div>
+            <div class="sides side-2">
+              <span class="dot dot-1"></span>
+              <span class="dot dot-2"></span>
+            </div>
+            <div class="sides side-3">
+              <span class="dot dot-1"></span>
+              <span class="dot dot-2"></span>
+              <span class="dot dot-3"></span>
+            </div>
+            <div class="sides side-4">
+              <span class="dot dot-1"></span>
+              <span class="dot dot-2"></span>
+              <span class="dot dot-3"></span>
+              <span class="dot dot-4"></span>
+            </div>
+            <div class="sides side-5">
+              <span class="dot dot-1"></span>
+              <span class="dot dot-2"></span>
+              <span class="dot dot-3"></span>
+              <span class="dot dot-4"></span>
+              <span class="dot dot-5"></span>
+            </div>
+            <div class="sides side-6">
+              <span class="dot dot-1"></span>
+              <span class="dot dot-2"></span>
+              <span class="dot dot-3"></span>
+              <span class="dot dot-4"></span>
+              <span class="dot dot-5"></span>
+              <span class="dot dot-6"></span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="flex-container">
-        <div class="player1">
-          <h4 class="rolltext">You rolled a</h4>
-          <h4 id="result1">&nbsp;</h4>
-          <div style="padding-top: 12px">
-            <h5 class="sc" style="display: inline">Total Score:</h5>
-            <h5 id="score1" style="display: inline; float: left">0</h5>
+        <div class="flex-container">
+          <div class="player1">
+            <div class="rollflex">
+              <h4 class="rolltext">You rolled a</h4>
+              <h4 id="result1">&nbsp;</h4>
+            </div>
+            <div>
+              <h5 class="sc" style="display: inline">Total Score:</h5>
+              <h5
+                id="score1"
+                style="display: inline; float: left; padding-top: 10px"
+              >
+                0
+              </h5>
+            </div>
+          </div>
+          <div class="player2">
+            <div class="rollflex">
+              <h4 class="rolltext">You rolled a</h4>
+              <h4 id="result2">&nbsp;</h4>
+            </div>
+            <div>
+              <h5 class="sc" style="display: inline">Total Score:</h5>
+              <h5
+                id="score2"
+                style="display: inline; float: left; padding-top: 10px"
+              >
+                0
+              </h5>
+            </div>
           </div>
         </div>
-        <div class="player2">
-          <h4 class="rolltext">You rolled a</h4>
-          <h4 id="result2">&nbsp;</h4>
-          <div style="padding-top: 12px">
-            <h5 class="sc" style="display: inline">Total Score:</h5>
-            <h5 id="score2" style="display: inline; float: left">0</h5>
-          </div>
+        <div class="pinfo">
+          <h3 id="player" style="display: inline"></h3>
+
+          <h3 style="display: inline; float: inline-start; font-weight: 100">
+            roll the dice
+          </h3>
         </div>
-      </div>
-      <div class="pinfo">
-        <h3 id="player" style="display: inline"></h3>
 
-        <h3 style="display: inline; float: inline-start; font-weight: 100">
-          roll the dice
-        </h3>
-      </div>
+        <div class="message">
+          Winning score: <span id="max" style="display: inline">0</span>
+        </div>
 
-      <div class="message">
-        Winning score: <span id="max" style="display: inline">0</span>
-      </div>
-
-      <div class="res">
-        <button id="reset">Reset the Game</button>
+        <div class="res">
+          <button id="reset">Reset the Game</button>
+        </div>
       </div>
     </div>
   </body>

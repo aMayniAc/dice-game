@@ -1,12 +1,23 @@
 * {
-  margin: 2px;
-
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
+body {
+  background-color: #3c607b;
+}
+
 .title {
-  padding: 20px;
-  background-color: rgb(220, 143, 56);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik Iso", sans-serif;
+  font-size: 60px;
+  background-color: #4e54c8;
+  color: #b7d3ee;
+  box-shadow: 5px 5px #b7d3ee;
 }
 
 .nav {
@@ -19,50 +30,87 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   text-align: center;
   height: auto;
   width: auto;
 }
 
 .player1 {
-  border: 2px solid black;
+  border: 5px;
+  border-radius: 10px;
+  border-style: ridge;
+  box-shadow: 2px 2px black;
+  border-color: rgb(111, 190, 190);
   text-align: left;
-  width: 200px;
-
-  height: 60px;
+  font-family: "Amatic SC";
+  width: 250px;
+  height: 100px;
 }
+
 .player2 {
-  border: 2px solid black;
+  border: 5px rgb(111, 190, 190);
+  border-radius: 10px;
+  box-shadow: 2px 2px black;
+  border-style: ridge;
   align-items: center;
-  width: 200px;
-  height: 60px;
+  width: 250px;
+  font-family: "Amatic SC";
+  height: 100px;
 }
 
 #player {
   font-size: 20px;
+  font-family: "Orbitron";
   font-weight: 900;
 }
 
 .pinfo {
   padding-top: 20px;
+  font-size: 25px;
+  font-family: "Indie Flower";
 }
 
 .sc {
-  padding-left: 3px;
+  padding-top: 10px;
+  padding-left: 10px;
   float: left;
-  /* margin-top: 80%; */
+  font-size: 20px;
 }
 
 .rolltext {
   display: inline;
   float: left;
-  padding-top: 10px;
-  padding-left: 4px;
+  font-family: "Indie Flower";
+  font-size: 25px;
+}
+
+.rollflex {
+  display: flex;
+  padding-top: 15px;
+  padding-left: 10px;
+  justify-content: left;
+  align-items: center;
+}
+
+#score1,
+#score2 {
+  font-size: 20px;
+  font-family: sans-serif;
+  padding-left: 10px;
+}
+
+#result1,
+#result2 {
+  font-size: 25px;
+  font-family: sans-serif;
+  padding-left: 10px;
 }
 
 .message {
   padding: 10px;
-  font-size: 20px;
+  font-size: 25px;
+  font-family: "Amatic SC";
   font-weight: bold;
 }
 
@@ -74,10 +122,12 @@
 
 #reset {
   font-size: 15px;
-  background-color: rgb(226, 133, 27);
+  background-color: rgba(255, 255, 255);
   font-weight: 100;
   height: 40px;
-  color: white;
+  width: 150px;
+  font-family: "Orbitron";
+  color: black;
   border-radius: 10px;
   border: none;
   transition-duration: 0.3s;
@@ -85,8 +135,8 @@
 }
 
 #reset:hover {
-  background-color: white;
-  color: rgb(226, 133, 27);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
   border: none;
 }
 
